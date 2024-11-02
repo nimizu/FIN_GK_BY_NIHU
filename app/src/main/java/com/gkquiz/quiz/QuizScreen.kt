@@ -15,10 +15,12 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun ChapterSelectionScreen(onChapterSelected: (String) -> Unit) {
+    var selectedTopic by remember { mutableStateOf<String?>(null) }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background) // Adapt to dark/light theme
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -26,60 +28,106 @@ fun ChapterSelectionScreen(onChapterSelected: (String) -> Unit) {
         Text(
             text = "Made by Nihu",
             style = MaterialTheme.typography.headlineSmall,
-            color = MaterialTheme.colorScheme.onBackground // Adapt to theme
+            color = MaterialTheme.colorScheme.onBackground
         )
         Spacer(modifier = Modifier.height(16.dp))
 
-        chapters.keys.forEach { chapter ->
+        if (selectedTopic == null) {
+            // Show topics list
+            topics.keys.forEach { topic ->
+                Button(
+                    onClick = { selectedTopic = topic },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                ) {
+                    Text(text = topic)
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+        } else {
+            // Show chapters under the selected topic
+            Text(
+                text = "Select Chapter in $selectedTopic",
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onBackground
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            topics[selectedTopic]?.forEach { chapter ->
+                Button(
+                    onClick = { onChapterSelected(chapter) },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                ) {
+                    Text(text = chapter)
+                }
+                Spacer(modifier = Modifier.height(8.dp))
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+            // Back button to reset topic selection
             Button(
-                onClick = { onChapterSelected(chapter) },
+                onClick = { selectedTopic = null },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary, // Button color
-                    contentColor = MaterialTheme.colorScheme.onPrimary // Text color inside button
+                    containerColor = MaterialTheme.colorScheme.secondary,
+                    contentColor = MaterialTheme.colorScheme.onSecondary
                 )
             ) {
-                Text(text = chapter)
+                Text("Back to Topics")
             }
-            Spacer(modifier = Modifier.height(8.dp))
         }
     }
 }
 
 
+
 @Composable
 fun QuizScreen() {
-    var selectedChapter by remember { mutableStateOf<String?>(null) } // Track selected chapter
-    var questions by remember { mutableStateOf(emptyList<Question>()) } // Track questions for selected chapter
+    var selectedChapter by remember { mutableStateOf<String?>(null) }
+    var questions by remember { mutableStateOf(emptyList<Question>()) }
     var questionIndex by remember { mutableIntStateOf(0) }
     var score by remember { mutableIntStateOf(0) }
-    var selectedOptionIndex by remember { mutableIntStateOf(-1) }
     var isQuizCompleted by remember { mutableStateOf(false) }
 
+    // Track selected answers and feedback state for each question
+    var selectedOptionIndex by remember { mutableIntStateOf(-1) }
+    var showFeedback by remember { mutableStateOf(false) }
+    var allowNext by remember { mutableStateOf(false) }
+
+    // Track answer history
+    val answerHistory = remember { mutableStateListOf<Int?>() }
+    repeat(questions.size) { answerHistory.add(null) } // Initialize history with 'null' for each question
+
     if (selectedChapter == null) {
-        // Show chapter selection screen if no chapter selected
         ChapterSelectionScreen { chapter ->
             selectedChapter = chapter
-            questions = chapters[chapter]?.shuffled() ?: emptyList() // Load and shuffle questions for the chapter
+            questions = chapters[chapter]?.shuffled() ?: emptyList()
         }
     } else if (isQuizCompleted) {
-        // Show score dialog when quiz is completed
         showScore(score, questions.size) {
-            // Reset to allow chapter re-selection
             selectedChapter = null
             questionIndex = 0
             score = 0
             selectedOptionIndex = -1
             isQuizCompleted = false
+            allowNext = false
+            showFeedback = false
+            answerHistory.clear()
+            repeat(questions.size) { answerHistory.add(null) }
         }
     } else {
-        // Quiz question display and logic for the selected chapter
         val currentQuestion = questions[questionIndex]
         val shuffledOptions = remember(questionIndex) { currentQuestion.options.shuffled() }
 
+        // Restore previous answer if available
+        selectedOptionIndex = answerHistory[questionIndex] ?: -1
+
         Scaffold(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(MaterialTheme.colorScheme.background), // Adapt to dark/light theme
+            modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
             content = { paddingValues ->
                 Column(
                     modifier = Modifier
@@ -92,47 +140,95 @@ fun QuizScreen() {
                     Text(
                         text = "Question ${questionIndex + 1}/${questions.size}",
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary // Adapt to theme
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = currentQuestion.questionText,
-                        color = MaterialTheme.colorScheme.onBackground // Adapt to theme
+                        color = MaterialTheme.colorScheme.onBackground
                     )
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // Display options with highlighting for selected
+                    // Highlight correct and incorrect answers
                     shuffledOptions.forEachIndexed { index, option ->
-                        val backgroundColor = if (index == selectedOptionIndex) Color(0xFFD6EAF8) else MaterialTheme.colorScheme.surface
+                        val backgroundColor = when {
+                            showFeedback && option == currentQuestion.options[currentQuestion.correctAnswer] -> Color.Green
+                            showFeedback && index == selectedOptionIndex -> Color.Red
+                            index == selectedOptionIndex -> Color(0xFFD6EAF8) // Light blue for selected option
+                            else -> MaterialTheme.colorScheme.surface
+                        }
                         Text(
                             text = option,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .background(backgroundColor)
-                                .clickable { selectedOptionIndex = index }
+                                .clickable(enabled = !showFeedback) {
+                                    selectedOptionIndex = index
+                                    answerHistory[questionIndex] = selectedOptionIndex
+                                }
                                 .padding(8.dp),
-                            color = MaterialTheme.colorScheme.onSurface // Adapt to theme
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                     }
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    Button(
-                        onClick = {
-                            if (selectedOptionIndex == shuffledOptions.indexOf(currentQuestion.options[currentQuestion.correctAnswer])) {
-                                score++
+                    // Save and Next Button functionality
+                    Row {
+                        if (!showFeedback) {
+                            Button(
+                                onClick = {
+                                    showFeedback = true
+                                    allowNext = true
+
+                                    // Check answer correctness
+                                    if (selectedOptionIndex == shuffledOptions.indexOf(currentQuestion.options[currentQuestion.correctAnswer])) {
+                                        score++
+                                    }
+                                },
+                                modifier = Modifier.weight(1f),
+                                enabled = selectedOptionIndex != -1 // Enable only if an option is selected
+                            ) {
+                                Text("Save")
                             }
-                            selectedOptionIndex = -1 // Reset selection
-                            if (questionIndex < questions.size - 1) {
-                                questionIndex++
-                            } else {
-                                isQuizCompleted = true // Mark the quiz as complete
+                        }
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
+                        if (allowNext) {
+                            Button(
+                                onClick = {
+                                    showFeedback = false
+                                    allowNext = false
+                                    selectedOptionIndex = -1
+                                    if (questionIndex < questions.size - 1) {
+                                        questionIndex++
+                                    } else {
+                                        isQuizCompleted = true
+                                    }
+                                },
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Text("Next")
                             }
-                        },
-                        modifier = Modifier.align(Alignment.End)
-                    ) {
-                        Text("Save and Next")
+                        }
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
+                        Button(
+                            onClick = {
+                                if (questionIndex > 0) {
+                                    questionIndex--
+                                    showFeedback = true
+                                    selectedOptionIndex = answerHistory[questionIndex] ?: -1
+                                    allowNext = selectedOptionIndex != -1
+                                }
+                            },
+                            modifier = Modifier.weight(1f)
+                        ) {
+                            Text("Back")
+                        }
                     }
                 }
             }

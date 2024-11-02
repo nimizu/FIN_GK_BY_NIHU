@@ -163,6 +163,23 @@ val chapter10Questions = listOf(
 )
 
 
+val topics = mapOf(
+    "First in India" to listOf(
+        "First in India- Science",
+        "First in India- Governance",
+        "First in India- Defence",
+        "First in India- Sports",
+        "First in India- Architecture"
+    ),
+    "Frequently Asked" to listOf(
+        "Frequently Asked Part 1",
+        "Frequently Asked Part 2",
+        "Frequently Asked Part 3",
+        "Frequently Asked Part 4",
+        "Frequently Asked Part 5"
+    )
+)
+
 val chapters = mapOf(
     "First in India- Science" to chapter1Questions,
     "First in India- Governance" to chapter2Questions,
@@ -173,7 +190,5 @@ val chapters = mapOf(
     "Frequently Asked Part 2" to chapter7Questions,
     "Frequently Asked Part 3" to chapter8Questions,
     "Frequently Asked Part 4" to chapter9Questions,
-    "Frequently Asked Part 5" to chapter10Questions,
-
-    // Add more chapters if needed
+    "Frequently Asked Part 5" to chapter10Questions
 )
