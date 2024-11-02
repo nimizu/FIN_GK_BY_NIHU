@@ -1,7 +1,9 @@
 package com.gkquiz.quiz
 
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
+
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -10,83 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-
-
-
-@Composable
-fun ChapterSelectionScreen(onChapterSelected: (String) -> Unit) {
-    var selectedTopic by remember { mutableStateOf<String?>(null) }
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
-            .padding(16.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = "Made by Nihu",
-            style = MaterialTheme.typography.headlineSmall,
-            color = MaterialTheme.colorScheme.onBackground
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-
-        if (selectedTopic == null) {
-            // Show topics list
-            topics.keys.forEach { topic ->
-                Button(
-                    onClick = { selectedTopic = topic },
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = MaterialTheme.colorScheme.onPrimary
-                    )
-                ) {
-                    Text(text = topic)
-                }
-                Spacer(modifier = Modifier.height(8.dp))
-            }
-        } else {
-            // Show chapters under the selected topic
-            Text(
-                text = "Select Chapter in $selectedTopic",
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-
-            topics[selectedTopic]?.forEach { chapter ->
-                Button(
-                    onClick = { onChapterSelected(chapter) },
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = MaterialTheme.colorScheme.onPrimary
-                    )
-                ) {
-                    Text(text = chapter)
-                }
-                Spacer(modifier = Modifier.height(8.dp))
-            }
-
-            Spacer(modifier = Modifier.height(16.dp))
-            // Back button to reset topic selection
-            Button(
-                onClick = { selectedTopic = null },
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondary,
-                    contentColor = MaterialTheme.colorScheme.onSecondary
-                )
-            ) {
-                Text("Back to Topics")
-            }
-        }
-    }
-}
-
-
+import androidx.compose.foundation.clickable
 
 @Composable
-fun QuizScreen() {
+fun QuizScreen(isOnlineMode: Boolean) {
     var selectedChapter by remember { mutableStateOf<String?>(null) }
     var questions by remember { mutableStateOf(emptyList<Question>()) }
     var questionIndex by remember { mutableIntStateOf(0) }
@@ -100,12 +29,22 @@ fun QuizScreen() {
 
     // Track answer history
     val answerHistory = remember { mutableStateListOf<Int?>() }
-    repeat(questions.size) { answerHistory.add(null) } // Initialize history with 'null' for each question
 
     if (selectedChapter == null) {
         ChapterSelectionScreen { chapter ->
             selectedChapter = chapter
-            questions = chapters[chapter]?.shuffled() ?: emptyList()
+            // Load questions based on the mode
+            questions = if (isOnlineMode) {
+                // Fetch chapters from GitHub or wherever you have the online data
+                val chaptersString = fetchChaptersFromGitHub() // You need to implement this
+                // Parse and shuffle questions based on the selected chapter
+                chapters[chapter]?.shuffled() ?: emptyList()
+            } else {
+                // Load local chapters here
+                chapters[chapter]?.shuffled() ?: emptyList()
+            }
+            answerHistory.clear()
+            repeat(questions.size) { answerHistory.add(null) }
         }
     } else if (isQuizCompleted) {
         showScore(score, questions.size) {

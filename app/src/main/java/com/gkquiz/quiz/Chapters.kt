@@ -165,7 +165,7 @@ val chapter10Questions = listOf(
 
 val topics = mapOf(
     "First in India" to listOf(
-        "First in India- Science",
+        "Offline- Science",
         "First in India- Governance",
         "First in India- Defence",
         "First in India- Sports",
