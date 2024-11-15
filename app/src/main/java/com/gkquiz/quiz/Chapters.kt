@@ -162,6 +162,98 @@ val chapter10Questions = listOf(
     Question("Who was the first woman to receive the Nobel Prize?", listOf("Mother Teresa", "Indira Gandhi", "Amartya Sen", "Malala Yousafzai"), 0)
 )
 
+val chapter11Questions = listOf(
+    Question("Who was the first Secretary-General of the United Nations?", listOf("Trygve Lie", "Dag Hammarskjöld", "U Thant", "Kurt Waldheim"), 0),
+    Question("Who was the first President of the United States of America?", listOf("Abraham Lincoln", "George Washington", "Thomas Jefferson", "John Adams"), 1),
+    Question("Who was the first President of the Republic of China?", listOf("Mao Zedong", "Chiang Kai-shek", "Dr. Sun Yat Sen", "Yuan Shikai"), 2),
+    Question("Who was the first Prime Minister of Great Britain?", listOf("Robert Peel", "Winston Churchill", "Robert Walpole", "Benjamin Disraeli"), 2),
+    Question("Who was Pakistan's first Governor-General?", listOf("Liaquat Ali Khan", "Mohammed Ali Jinnah", "Zulfiqar Ali Bhutto", "Iskander Mirza"), 1),
+    Question("Who was the first Ethnic-Indian Prime Minister of Fiji?", listOf("Frank Bainimarama", "Laisenia Qarase", "Mahendra Choudhary", "Ratu Sir Kamisese Mara"), 2),
+    Question("Who was the first American President to visit India?", listOf("Dwight David Eisenhower", "John F. Kennedy", "Harry S. Truman", "Richard Nixon"), 0),
+    Question("Who was the first Russian (Soviet) Prime Minister to visit India?", listOf("Joseph Stalin", "Nikolai Bulganin", "Nikita Khrushchev", "Leonid Brezhnev"), 1),
+    Question("Who was the first European invader of Indian soil?", listOf("Alexander the Great", "Marco Polo", "Vasco da Gama", "Bartholomew Dias"), 0),
+    Question("Who was the first man to go into space?", listOf("John Glenn", "Neil Armstrong", "Major Yuri Gagarin", "Alan Shepard"), 2),
+    Question("Who was the first man to walk in space?", listOf("Buzz Aldrin", "Alexey Leonov", "Pete Conrad", "Ed White"), 1),
+    Question("Who was the first space tourist?", listOf("Dennis Tito", "Mark Shuttleworth", "Charles Simonyi", "Richard Garriott"), 0),
+    Question("Who was the first man to set foot on the Moon?", listOf("Buzz Aldrin", "Neil Armstrong", "Michael Collins", "Yuri Gagarin"), 1),
+    Question("Who was the first man to fly an aeroplane?", listOf("Amelia Earhart", "Charles Lindbergh", "Wright Brothers", "Santos Dumont"), 2),
+    Question("Who was the first man to reach the North Pole?", listOf("Roald Amundsen", "Robert Peary", "Matthew Henson", "Fridtjof Nansen"), 1),
+    Question("Who was the first man to reach the South Pole?", listOf("Robert Peary", "Roald Amundsen", "Ernest Shackleton", "Douglas Mawson"), 1),
+    Question("Who was the first man to climb Mount Everest?", listOf("George Mallory", "Sherpa Tenzing Norgay", "Sir Edmund Hillary", "Sherpa Tenzing Norgay and Sir Edmund Hillary"), 3),
+    Question("Who was the first man to climb Mount Everest twice?", listOf("Nawang Gombu", "Reinhold Messner", "Kami Rita", "Edmund Hillary"), 0),
+    Question("Who was the first blind man to scale Mount Everest?", listOf("Erik Weihenmayer", "Mark Inglis", "Andy Holzer", "Steve Bate"), 0),
+    Question("Who was the first person to sail around the world?", listOf("Ferdinand Magellan", "James Cook", "Vasco da Gama", "Christopher Columbus"), 0),
+    Question("Who was the first deaf and dumb person to cross the Strait of Gibraltar?", listOf("Helen Keller", "Taranath Shenoy", "Sudha Chandran", "Mansoor Ali"), 1),
+    Question("Who was the first European to visit China?", listOf("Marco Polo", "Vasco da Gama", "Ferdinand Magellan", "Christopher Columbus"), 0),
+    Question("Who was the first man to draw the map of Earth?", listOf("Claudius Ptolemy", "Anaximander", "Eratosthenes", "Strabo"), 1),
+    Question("Who was the first man to compile an encyclopaedia?", listOf("Pliny the Elder", "Aspheosis", "Aristotle", "Herodotus"), 1),
+    Question("Who was the first man to win the Nobel Prize for Literature?", listOf("Sully Prudhomme", "Rabindranath Tagore", "Rudyard Kipling", "Henryk Sienkiewicz"), 0),
+    Question("Who were the first men to win the Nobel Prize for Peace?", listOf("Henry Dunant and Frederic Passy", "Nelson Mandela and FW de Klerk", "Woodrow Wilson and Albert Einstein", "Barack Obama and Theodore Roosevelt"), 0),
+    Question("Who was the first man to win the Nobel Prize for Physics?", listOf("Albert Einstein", "Marie Curie", "WK Roentgen", "Niels Bohr"), 2),
+    Question("Who was the first man to win the Nobel Prize for Chemistry?", listOf("Jacobus H Van't Holt", "Marie Curie", "Alfred Nobel", "Linus Pauling"), 0),
+    Question("Who was the first man to win the Nobel Prize for Medicine?", listOf("Robert Koch", "Alexander Fleming", "AE Von Behring", "Frederick Banting"), 2),
+    Question("Who were the first men to win the Nobel Prize for Economics?", listOf("Paul Samuelson", "Ragnar Frisch and Jan Tinbergen", "John Hicks", "Amartya Sen"), 1),
+    Question("Who is the first and only black man to win a singles Wimbledon Trophy?", listOf("Arthur Ashe", "Serena Williams", "Venus Williams", "Yannick Noah"), 0),
+    Question("Who was the first Asian to head the International Cricket Council?", listOf("Srinivasan Venkataraghavan", "Jagmohan Dalmiya", "Sunil Gavaskar", "Kapil Dev"), 1),
+    Question("Who was the first man to hit a double century in a One Day International Match?", listOf("Rohit Sharma", "Virender Sehwag", "Sachin Tendulkar", "Chris Gayle"), 2)
+)
+
+val chapter12Questions = listOf(
+    Question("Who was the first woman President of the UN General Assembly?", listOf("Indira Gandhi", "Margaret Thatcher", "Vijaya Lakshmi Pandit", "Benazir Bhutto"), 2),
+    Question("Who was the first woman President of a country?", listOf("Maria Estela Peron", "Golda Meir", "Angela Merkel", "Jacinda Ardern"), 0),
+    Question("Who was the first woman Prime Minister of a country?", listOf("S Bhandarnayake", "Margaret Thatcher", "Indira Gandhi", "Benazir Bhutto"), 0),
+    Question("Who was the first woman Prime Minister of England?", listOf("Theresa May", "Margaret Thatcher", "Mary Robinson", "Angela Merkel"), 1),
+    Question("Who was the first woman Prime Minister of any Muslim country?", listOf("Khaleda Zia", "Sheikh Hasina", "Benazir Bhutto", "Fatima Jinnah"), 2),
+    Question("Who was the first woman cosmonaut in space?", listOf("Sally Ride", "Valentina Tereshkova", "Kalpana Chawla", "Anousheh Ansari"), 1),
+    Question("Who was the first woman space tourist?", listOf("Anousheh Ansari", "Christina Koch", "Jessica Meir", "Mae Jemison"), 0),
+    Question("Who was the first woman Vice President of the United States?", listOf("Hillary Clinton", "Kamala Harris", "Sarah Palin", "Geraldine Ferraro"), 1),
+    Question("Who was the first woman to set foot on the North Pole?", listOf("Ann Bancroft", "Caroline Michaelson", "Junko Tabei", "Arunima Sinha"), 0),
+    Question("Who was the first woman to reach Antarctica?", listOf("Ann Bancroft", "Caroline Michaelson", "Junko Tabei", "Shital Mahajan"), 1),
+    Question("Who was the first woman to climb Mount Everest?", listOf("Junko Tabei", "Arunima Sinha", "Sophie Psilolignou", "Shital Mahajan"), 0),
+    Question("Who was the first woman in the world to cross the Strait of Gibraltar?", listOf("Sophie Psilolignou", "Ann Bancroft", "Jessica Meir", "Arunima Sinha"), 0),
+    Question("Who was the first woman to chair the US Central Bank 'Federal Reserve'?", listOf("Janet Yellen", "Christine Lagarde", "Gita Gopinath", "Louise Frechette"), 0),
+    Question("Who was the first UN Deputy Secretary-General?", listOf("Vijaya Lakshmi Pandit", "Louise Frechette", "Gita Gopinath", "Jessica Meir"), 1),
+    Question("Who was the first female amputee to climb Mount Everest?", listOf("Arunima Sinha", "Junko Tabei", "Ann Bancroft", "Shital Mahajan"), 0),
+    Question("Who was the first woman CFO and MD of the World Bank?", listOf("Anshula Kant", "Christine Lagarde", "Gita Gopinath", "Janet Yellen"), 0),
+    Question("Who was the first female amputee to climb Mount Vinson?", listOf("Arunima Sinha", "Shital Mahajan", "Ann Bancroft", "Junko Tabei"), 0),
+    Question("Who was the first woman chief economist for the IMF?", listOf("Gita Gopinath", "Christine Lagarde", "Janet Yellen", "Louise Frechette"), 0),
+    Question("Who was the first female ICC match referee?", listOf("Shital Mahajan", "GS Lakshmi", "Anshula Kant", "Sophie Psilolignou"), 1),
+    Question("Who were the first astronauts to complete a historic all-female spacewalk?", listOf("Christina Koch and Jessica Meir", "Sally Ride and Mae Jemison", "Valentina Tereshkova and Kalpana Chawla", "Ann Bancroft and Arunima Sinha"), 0),
+    Question("Who was the first woman to jump from a height of 21,500 ft in front of Mt. Everest?", listOf("Shital Mahajan", "Arunima Sinha", "Ann Bancroft", "Junko Tabei"), 0)
+)
+
+val chapter13Questions = listOf(
+    Question("Which was the first country to make public transport free?", listOf("Luxembourg", "Sweden", "Germany", "Switzerland"), 0),
+    Question("Which was the first country to declare a climate emergency?", listOf("United Kingdom", "New Zealand", "France", "Australia"), 0),
+    Question("Which was the first country to grant citizenship rights to a robot?", listOf("United States", "Saudi Arabia", "Japan", "China"), 1),
+    Question("Which was the first country to ban plastic bags?", listOf("India", "Bangladesh", "Kenya", "Sweden"), 1),
+    Question("Which was the first country to approve a three-parent baby?", listOf("United States", "United Kingdom", "Germany", "France"), 1),
+    Question("Which was the first country to make a written Constitution?", listOf("United States of America", "France", "United Kingdom", "India"), 0),
+    Question("Which was the first country to appoint a Lokpal?", listOf("India", "Sweden", "Denmark", "Norway"), 1),
+    Question("Which was the first country to ban capital punishment?", listOf("Switzerland", "Venezuela", "Netherlands", "France"), 1),
+    Question("Which was the first country to give voting rights to women?", listOf("United States", "New Zealand", "Australia", "Sweden"), 1),
+    Question("Which was the first country to impose a carbon tax?", listOf("New Zealand", "Denmark", "France", "Germany"), 0),
+    Question("Which was the first country to start VAT (Value Added Tax)?", listOf("Brazil", "Germany", "Denmark", "All of the above"), 3),
+    Question("Which was the first country to issue paper currency?", listOf("India", "United States", "China", "France"), 2),
+    Question("Which was the first country to give constitutional status to animal rights?", listOf("India", "Switzerland", "Germany", "New Zealand"), 1),
+    Question("Which was the first country to implement family planning?", listOf("India", "China", "United States", "Bangladesh"), 0),
+    Question("Which was the first country to print books?", listOf("China", "Germany", "India", "France"), 0),
+    Question("Which was the first country to sign a nuclear agreement with India?", listOf("France", "United States", "Russia", "United Kingdom"), 0),
+    Question("Which was the first country to send a human to the Moon?", listOf("Russia", "United States of America", "China", "France"), 1),
+    Question("What was the name of the first spaceship that landed on Mars?", listOf("Viking-1", "Voyager", "Mars Rover", "Spirit"), 0),
+    Question("What was the name of the first space shuttle launched?", listOf("Challenger", "Discovery", "Columbia", "Endeavour"), 2),
+    Question("Which was the first country to launch a satellite into space?", listOf("United States", "China", "Russia (former USSR)", "Japan"), 2),
+    Question("Which was the first country to launch a radio telescope satellite into space?", listOf("China", "Russia", "United States", "Japan"), 3),
+    Question("Which was the first country to win the Football World Cup?", listOf("Brazil", "Uruguay", "Argentina", "Italy"), 1),
+    Question("Which was the first country to host the Modern Olympic Games?", listOf("France", "Greece", "United States", "Italy"), 1),
+    Question("What was the name of the first cloned human baby?", listOf("Eve", "Dolly", "Hope", "Genesis"), 0),
+    Question("Which was the first religion in the world?", listOf("Christianity", "Sanatan Dharma", "Buddhism", "Islam"), 1),
+    Question("Which was the first university in the world?", listOf("Nalanda University", "Oxford University", "Taxila University", "Harvard University"), 2),
+    Question("Which was the first country to ban sunscreen (for the protection of coral reefs)?", listOf("Ecuador", "Palau", "Fiji", "Maldives"), 1),
+    Question("Which was the first country to give legal rights to animals?", listOf("India", "Ecuador", "United States", "Germany"), 1)
+)
+
+
 
 val topics = mapOf(
     "First in India" to listOf(
@@ -177,7 +269,13 @@ val topics = mapOf(
         "Frequently Asked Part 3",
         "Frequently Asked Part 4",
         "Frequently Asked Part 5"
+    ),
+    "GK" to listOf(
+        "Men",
+        "Women",
+        "Miscellaneous"
     )
+
 )
 
 val chapters = mapOf(
@@ -190,5 +288,9 @@ val chapters = mapOf(
     "Frequently Asked Part 2" to chapter7Questions,
     "Frequently Asked Part 3" to chapter8Questions,
     "Frequently Asked Part 4" to chapter9Questions,
-    "Frequently Asked Part 5" to chapter10Questions
+    "Frequently Asked Part 5" to chapter10Questions,
+    "Man" to chapter11Questions,
+    "Women" to chapter12Questions,
+    "Miscellaneous" to chapter13Questions
 )
+
