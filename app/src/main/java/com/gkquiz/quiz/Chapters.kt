@@ -289,7 +289,7 @@ val chapters = mapOf(
     "Frequently Asked Part 3" to chapter8Questions,
     "Frequently Asked Part 4" to chapter9Questions,
     "Frequently Asked Part 5" to chapter10Questions,
-    "Man" to chapter11Questions,
+    "Men" to chapter11Questions,
     "Women" to chapter12Questions,
     "Miscellaneous" to chapter13Questions
 )
