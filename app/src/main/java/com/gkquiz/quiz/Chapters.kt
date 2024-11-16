@@ -253,6 +253,145 @@ val chapter13Questions = listOf(
     Question("Which was the first country to give legal rights to animals?", listOf("India", "Ecuador", "United States", "Germany"), 1)
 )
 
+val GK1 = listOf(
+    Question("Who was the first Governor-General of India?", listOf("Lord Mountbatten", "C Rajagopalachari", "William Bentinck", "Lord Irwin"), 2),
+    Question("Who was the Governor-General of Independent India?", listOf("C Rajagopalachari", "Lord Irwin", "William Bentinck", "Lord Mountbatten"), 3),
+    Question("Who was the first and last Indian Governor-General of Free India?", listOf("Lord Mountbatten", "C Rajagopalachari", "William Bentinck", "Lord Irwin"), 1),
+    Question("Who was the first Muslim President of India?", listOf("Dr Zakir Hussain", "Dr Radhakrishnan", "Morarji Desai", "Sardar Vallabhbhai Patel"), 0),
+    Question("Who was the first Prime Minister of India to resign before the full term?", listOf("Jawaharlal Nehru", "Morarji Desai", "Lal Bahadur Shastri", "Indira Gandhi"), 1),
+    Question("Who was the first person to stay in Rashtrapati Bhawan?", listOf("Lord Irwin", "C Rajagopalachari", "Dr Zakir Hussain", "Lord Mountbatten"), 0),
+    Question("Who was the first President of National Congress?", listOf("Womesh Chandra Bannerjee", "Sardar Vallabhbhai Patel", "Mahatma Gandhi", "Dadabhai Naoroji"), 0),
+    Question("Who was the first Home Minister of India?", listOf("Sardar Vallabhbhai Patel", "Lal Bahadur Shastri", "Morarji Desai", "Dr Radhakrishnan"), 0),
+    Question("Who was the first Indian Judge of International Court of Justice?", listOf("Dr Nagendra Singh", "Hargobind Khurana", "Amartya Sen", "Dr Radhakrishnan"), 0),
+    Question("Who was the first Indian Managing Director of the World Bank?", listOf("Gautam Kazi", "Anshula Kant", "Raghuram Rajan", "Arun Shourie"), 0),
+    Question("Who was the first Governor of the Reserve Bank of India?", listOf("Sir Osborne Smith", "C D Deshmukh", "Benegal Rama Rau", "KC Neogy"), 0),
+    Question("Who was the first Indian to join the ICS?", listOf("Satyendra Nath Tagore", "Dadabhai Naoroji", "Lala Lajpat Rai", "Bipin Chandra Pal"), 0),
+    Question("Who was the first Field Marshal of India?", listOf("SHFJ Manekshaw", "KM Cariappa", "Arjan Singh", "Kodandera Subayya Thimayya"), 0),
+    Question("Who was the first Indian Commander-in-Chief of India?", listOf("KM Cariappa", "SHFJ Manekshaw", "Arjan Singh", "RD Katari"), 0),
+    Question("Who was the first Indian Naval Chief?", listOf("RD Katari", "Arjan Singh", "KM Cariappa", "SHFJ Manekshaw"), 0),
+    Question("Who was the first Indian to win the Nobel Prize?", listOf("Rabindranath Tagore", "CV Raman", "Amartya Sen", "Mother Teresa"), 0),
+    Question("Who was the first Indian to get the Nobel Prize in Physics?", listOf("CV Raman", "Hargobind Khurana", "Subrahmanyan Chandrasekhar", "Venkatraman Ramakrishnan"), 0),
+    Question("Who was the first Indian to receive the Nobel Prize in Economics?", listOf("Amartya Sen", "Abhijit Banerjee", "Jagdish Bhagwati", "Hargobind Khurana"), 0),
+    Question("Who was the first person of Indian origin to get the Nobel Prize in Medicine?", listOf("Hargobind Khurana", "Venkatraman Ramakrishnan", "Subrahmanyan Chandrasekhar", "CV Raman"), 0),
+    Question("Who was the first Indian to receive the Bharat Ratna Award?", listOf("Dr Radhakrishnan", "Jawaharlal Nehru", "Mahatma Gandhi", "Rabindranath Tagore"), 0),
+    Question("Who was the first sportsperson to receive the Bharat Ratna?", listOf("Sachin Tendulkar", "PV Sindhu", "MS Dhoni", "Kapil Dev"), 0),
+    Question("Who was the first person to receive the Magsaysay Award?", listOf("Acharya Vinoba Bhave", "Mother Teresa", "Amartya Sen", "Dr Zakir Hussain"), 0),
+    Question("Who was the first cricketer to get the Padma Bhushan?", listOf("CK Nayudu", "Sachin Tendulkar", "Kapil Dev", "Sunil Gavaskar"), 0),
+    Question("Who was the first Indian to get the Grammy Award?", listOf("Pandit Ravishankar", "Lata Mangeshkar", "AR Rahman", "Zakir Hussain"), 0),
+    Question("Who was the first Indian to win the Pritzker Prize (Architecture)?", listOf("Balkrishna Doshi", "Charles Correa", "Laurie Baker", "Raj Rewal"), 0),
+    Question("Who was the first person to receive the Jnanpith Award?", listOf("Sri Shankar Kurup", "Rabindranath Tagore", "Dr Radhakrishnan", "Mulk Raj Anand"), 0),
+    Question("Who was the first Indian pilot?", listOf("JRD Tata", "Rakesh Sharma", "Kalpana Chawla", "Neerja Bhanot"), 0),
+    Question("Who was the first Indian to win the Richard Dawkins Award?", listOf("Javed Akhtar", "Arundhati Roy", "Amartya Sen", "Salman Rushdie"), 0),
+    Question("Who was the first Indian to score a triple century in Test Cricket?", listOf("Virender Sehwag", "Sachin Tendulkar", "Sunil Gavaskar", "Kapil Dev"), 0),
+    Question("Who was the first Ex-CJI appointed as Governor?", listOf("P Sathasivam", "Justice Bhagwati", "Justice Khanna", "Justice Verma"), 0),
+    Question("Who was the first Viceroy of India?", listOf("Lord Canning", "Lord Mountbatten", "Lord Curzon", "Lord Ripon"), 0),
+    Question("Who was the first Indian to win the World Food Prize?", listOf("MS Swaminathan", "Amartya Sen", "Verghese Kurien", "Subhash Palekar"), 0),
+    Question("Who was the first Speaker of Lok Sabha?", listOf("GV Mavalankar", "Balram Jakhar", "Somnath Chatterjee", "Meira Kumar"), 0),
+    Question("Who was the first Indian member of the British House of Commons?", listOf("Dadabhai Naoroji", "Gopal Krishna Gokhale", "Bal Gangadhar Tilak", "Lala Lajpat Rai"), 0),
+    Question("Who was the first Indian cricketer to score a Test Century?", listOf("Lala Amarnath", "Sunil Gavaskar", "Sachin Tendulkar", "Kapil Dev"), 0),
+    Question("Who was the first Chief Election Commissioner of India?", listOf("Sukumar Sen", "TN Seshan", "VS Sampath", "Sunil Arora"), 0),
+    Question("Who was the first Chairperson of Lokpal of India?", listOf("Pinaki Chandra Ghose", "Justice Ranjan Gogoi", "Justice Lodha", "Justice Katju"), 0),
+    Question("Who was the first Chief of Defence Staff of India?", listOf("General Bipin Rawat", "General MM Naravane", "General VK Singh", "General Deepak Kapoor"), 0)
+)
+
+val GK2 = listOf(
+    Question("Who was the first woman Prime Minister of India?", listOf("Indira Gandhi", "Sarojini Naidu", "Sonia Gandhi", "Meira Kumar"), 0),
+    Question("Who was the first woman Minister in Government?", listOf("Indira Gandhi", "Rajkumari Amrit Kaur", "Sucheta Kripalani", "Sarojini Naidu"), 1),
+    Question("Who was the first woman Judge in the Supreme Court?", listOf("Leela Seth", "Fathima Beevi", "Anna Chandy", "Kiran Bedi"), 1),
+    Question("Who was the first woman Chief Justice of a High Court?", listOf("Leela Seth", "Anna Chandy", "Fathima Beevi", "Kamini Roy"), 0),
+    Question("Who was the first woman lawyer to appear before a High Court in India and first to preside over the Rajya Sabha?", listOf("Annie Besant", "Sarojini Naidu", "Violet Alva", "Indira Gandhi"), 2),
+    Question("Who was the first woman President of the United Nations General Assembly?", listOf("Vijaya Lakshmi Pandit", "Sarojini Naidu", "Indira Gandhi", "Annie Besant"), 0),
+    Question("Who was the first woman Chief Minister of an Indian state?", listOf("Sucheta Kripalani", "Sarojini Naidu", "Jayalalithaa", "Indira Gandhi"), 0),
+    Question("Who was the first woman Governor of a State in free India?", listOf("Indira Gandhi", "Sarojini Naidu", "Rajkumari Amrit Kaur", "Sucheta Kripalani"), 1),
+    Question("Who was the first woman Chairman of the Union Public Service Commission?", listOf("Rose Millian Bathew", "Kiran Bedi", "Fathima Beevi", "Leela Seth"), 0),
+    Question("Who was the first woman Director General of Police?", listOf("Kanchan C Bhattacharya", "Kiran Bedi", "Fathima Beevi", "Leela Seth"), 0),
+    Question("Who was the first woman IPS Officer?", listOf("Kiran Bedi", "Fathima Beevi", "Leela Seth", "Kanchan C Bhattacharya"), 0),
+    Question("Who was the first woman President of the Indian National Congress?", listOf("Annie Besant", "Sarojini Naidu", "Vijaya Lakshmi Pandit", "Indira Gandhi"), 0),
+    Question("Who was the first woman Judge?", listOf("Anna Chandy", "Leela Seth", "Fathima Beevi", "Violet Alva"), 0),
+    Question("Who was the first woman Barrister?", listOf("Cornelia Sorabjee", "Kamini Roy", "Anna Chandy", "Leela Seth"), 0),
+    Question("Who was the first woman Honours Graduate?", listOf("Kamini Roy", "Sarojini Naidu", "Rajkumari Amrit Kaur", "Violet Alva"), 0),
+    Question("Who was the first woman Chairperson of Indian Airlines?", listOf("Sushma Chawla", "Durga Banerjee", "Sarojini Naidu", "Leela Seth"), 0),
+    Question("Who was the first woman to receive the Nobel Prize?", listOf("Mother Teresa", "Indira Gandhi", "Sarojini Naidu", "Kiran Bedi"), 0),
+    Question("Who was the first woman Airline Pilot?", listOf("Durga Banerjee", "Sushma Chawla", "Indira Gandhi", "Kalpana Chawla"), 0),
+    Question("Who was the first woman to receive the Bharat Ratna?", listOf("Indira Gandhi", "Sarojini Naidu", "Mother Teresa", "Kiran Bedi"), 0),
+    Question("Who was the first woman to receive the Jnanpith Award?", listOf("Ashapurna Devi", "Sarojini Naidu", "Kamini Roy", "Violet Alva"), 0),
+    Question("Who was the first woman to receive the Ashoka Chakra?", listOf("Neerja Bhanot", "Indira Gandhi", "Mother Teresa", "Kiran Bedi"), 0),
+    Question("Who was the first woman Asian Games Gold Medal Winner?", listOf("Kamaljit Sandhu", "PT Usha", "Karnam Malleswari", "Sania Mirza"), 0),
+    Question("Who was the first woman Olympic Medal Winner?", listOf("Karnam Malleswari", "PV Sindhu", "Sakshi Malik", "Saina Nehwal"), 0),
+    Question("Who was the first woman to climb Mount Everest?", listOf("Bachendri Pal", "Santosh Yadav", "Aarti Saha", "Kamini Roy"), 0),
+    Question("Who was the first woman to climb Mount Everest twice?", listOf("Santosh Yadav", "Bachendri Pal", "Aarti Saha", "Kiran Bedi"), 0),
+    Question("Who was the first woman to cross the English Channel?", listOf("Aarti Saha", "Santosh Yadav", "Kamini Roy", "Neerja Bhanot"), 0),
+    Question("Who was the first woman Doctor?", listOf("Kadambini Ganguly", "Kamini Roy", "Sarojini Naidu", "Violet Alva"), 0),
+    Question("Who was the first Test Tube Baby?", listOf("Durga (Kanupriya Agarwal)", "Kamini Roy", "Kalpana Chawla", "Aarti Saha"), 0),
+    Question("Who was the first woman to participate in the Olympics?", listOf("N. Polley", "Kamaljit Sandhu", "Aarti Saha", "Santosh Yadav"), 0),
+    Question("Who was the first woman Chief Election Commissioner of India?", listOf("VS Ramadevi", "Meira Kumar", "Kiran Bedi", "Violet Alva"), 0),
+    Question("Who was the first woman Speaker of Lok Sabha?", listOf("Meira Kumar", "Indira Gandhi", "Sarojini Naidu", "Kiran Bedi"), 0),
+    Question("Who was the first woman to win Wimbledon from India?", listOf("Sania Mirza", "Kamaljit Sandhu", "PV Sindhu", "Saina Nehwal"), 0),
+    Question("Who was the first woman to go into Space?", listOf("Kalpana Chawla", "Sunita Williams", "Neerja Bhanot", "Kiran Bedi"), 0),
+    Question("Who was the first woman to win a Silver Medal in the Olympics?", listOf("PV Sindhu", "Karnam Malleswari", "Sakshi Malik", "Saina Nehwal"), 0),
+    Question("Who was the first woman wrestler to win an Olympic Medal?", listOf("Sakshi Malik", "Karnam Malleswari", "PV Sindhu", "Saina Nehwal"), 0),
+    Question("Who was the first woman President?", listOf("Pratibha Patil", "Indira Gandhi", "Meira Kumar", "Sarojini Naidu"), 0),
+    Question("Who was the first Indian woman fighter pilot to fly a fighter jet?", listOf("Avani Chaturvedi", "Sushma Chawla", "Kalpana Chawla", "Hima Das"), 0),
+    Question("Who was the first Indian naval woman pilot?", listOf("Shubhangi Swaroop", "Durga Banerjee", "Hima Das", "Kalpana Chawla"), 0),
+    Question("Who was the first Indian to win a Gold Medal on International Track?", listOf("Hima Das", "PV Sindhu", "PT Usha", "Kiran Bedi"), 0),
+    Question("Who was the first Indian woman Flight Engineer?", listOf("Hina Jaiswal", "Avani Chaturvedi", "Shubhangi Swaroop", "Hima Das"), 0),
+    Question("Who was the first female military diplomat posted at Indian Missions Abroad?", listOf("Wing Commander Anjali Singh", "Avani Chaturvedi", "Shubhangi Swaroop", "Hina Jaiswal"), 0)
+)
+
+val GK3 = listOf(
+    Question("What was the first bank in India?", listOf("Bank of Hindustan (1770)", "State Bank of India", "Punjab National Bank", "Reserve Bank of India"), 0),
+    Question("Where was the first general post office (GPO) of India established?", listOf("Madras (1786)", "Bombay (1854)", "Calcutta (1774)", "Delhi (1877)"), 0),
+    Question("Which was India's first plane to be hijacked?", listOf("Fokker Friendship Plane (1971)", "Boeing 707 (1978)", "Air India Flight 182 (1985)", "Indian Airlines Flight IC-814 (1999)"), 0),
+    Question("When was the first telephone line introduced in India?", listOf("1851", "1900", "1911", "1925"), 0),
+    Question("What was the first talkie film of India?", listOf("Alam Ara (1931)", "Raja Harishchandra (1913)", "Devdas (1935)", "Mughal-e-Azam (1960)"), 0),
+    Question("What was the first battle tank of India?", listOf("Arjun", "Vijayanta", "T-90 Bhishma", "Ajeya"), 0),
+    Question("What was the first satellite of India?", listOf("Aryabhatta", "Bhaskara", "Rohini", "INSAT-1A"), 0),
+    Question("Which was the first Indian state to implement the Panchayati Raj System?", listOf("Rajasthan", "Kerala", "Tamil Nadu", "Gujarat"), 0),
+    Question("Which district became India's first totally electrified district?", listOf("Palakkad (Kerala)", "Ernakulam (Kerala)", "Chandigarh", "Shimla"), 0),
+    Question("Which city was the first to have an e-court in India?", listOf("Ahmedabad", "Delhi", "Bangalore", "Mumbai"), 0),
+    Question("Who was the first Indian to win an individual Olympic gold medal?", listOf("Abhinav Bindra", "Milkha Singh", "Leander Paes", "PV Sindhu"), 0),
+    Question("What was India's first lunar probe?", listOf("Chandrayaan-I (October 2008)", "Mangalyaan", "Chandrayaan-II", "Rohini"), 0),
+    Question("What was India's first dedicated military satellite?", listOf("Rukmini (01G-SAT-7)", "GSAT-6A", "RISAT-2", "Cartosat-2"), 0),
+    Question("What was India's first Mars Orbiter Mission?", listOf("Mangalyaan (5th November, 2013)", "Chandrayaan-I", "AstroSat", "Aditya-L1"), 0),
+    Question("Which was the first Organic State in India?", listOf("Sikkim", "Meghalaya", "Himachal Pradesh", "Nagaland"), 0),
+    Question("Which was the first state to attain 100% Primary Literacy Level?", listOf("Kerala", "Tamil Nadu", "Rajasthan", "Maharashtra"), 0),
+    Question("Which was the first State/Union Territory to operate fully on solar energy?", listOf("Daman and Diu", "Goa", "Puducherry", "Ladakh"), 0)
+)
+
+val GK4 = listOf(
+    Question("Where is the Indian Agriculture Research Institute located?", listOf("New Delhi", "Mumbai", "Chennai", "Bangalore"), 0),
+    Question("Where is the Central Rice Research Institute located?", listOf("Cuttack", "Hyderabad", "Varanasi", "Lucknow"), 0),
+    Question("Where is the Central Sugarcane Research Institute located?", listOf("Coimbatore", "Kanpur", "Bhopal", "Nagpur"), 0),
+    Question("Where is the Central Tobacco Research Institute located?", listOf("Rajahmundry", "Mumbai", "Kolkata", "Hyderabad"), 0),
+    Question("Where is the Central Potato Research Institute located?", listOf("Kufri, Shimla", "Manali", "Darjeeling", "Nainital"), 0),
+    Question("Where is the National Centre of Organic Farming located?", listOf("Ghaziabad", "Jaipur", "Bhubaneswar", "Chandigarh"), 0),
+    Question("Where is the National Plant Protection Training Institute located?", listOf("Hyderabad", "Delhi", "Mumbai", "Ahmedabad"), 0),
+    Question("Where is the Central Frozen Semen Production and Training Institute located?", listOf("Hissar Ghatta (Karnataka)", "Pune", "Nagpur", "Bhopal"), 0),
+    Question("Where is the Central Sheep Breeding Farm located?", listOf("Hissar", "Lucknow", "Shimla", "Guwahati"), 0),
+    Question("Where is the Indian Veterinary Research Institute located?", listOf("Izzatnagar, Bareilly (Uttar Pradesh)", "Kanpur", "Allahabad", "Varanasi"), 0),
+    Question("Where is the Animal Health Institute located?", listOf("Jalandhar", "Amritsar", "Ludhiana", "Patiala"), 0),
+    Question("Where is the Central Institute of Fisheries, Nautical and Engineering Training located?", listOf("Kochi", "Mumbai", "Goa", "Visakhapatnam"), 0),
+    Question("Where is the Integrated Fisheries Project located?", listOf("Kochi", "Chennai", "Mumbai", "Kolkata"), 0),
+    Question("Where is the Central Island Agriculture Research Institute (ICAR) located?", listOf("Port Blair", "Andhra Pradesh", "Lakshadweep", "Goa"), 0),
+    Question("Where is the Central Institute of Cotton Research located?", listOf("Nagpur", "Pune", "Surat", "Mumbai"), 0),
+    Question("Where is the Central Institute of Agricultural Engineering located?", listOf("Bhopal", "Indore", "Raipur", "Jabalpur"), 0),
+    Question("Where is the Central Institute of Fisheries Education located?", listOf("Mumbai", "Kochi", "Chennai", "Visakhapatnam"), 0),
+    Question("Where is the Central Institute of Fisheries Technology located?", listOf("Cochin", "Kolkata", "Mumbai", "Pune"), 0),
+    Question("Where is the Central Institute of Fresh Water Agriculture located?", listOf("Bhubaneswar", "Nagpur", "Raipur", "Patna"), 0),
+    Question("Where is the Central Soil Salinity Research Institute located?", listOf("Karnal", "Kanpur", "Lucknow", "Delhi"), 0),
+    Question("Where is the Central Inland Fisheries Research Institute located?", listOf("Barrackpore", "Kolkata", "Guwahati", "Bhubaneswar"), 0),
+    Question("Where is the Locust Warning Organisation located?", listOf("Jodhpur", "Nagpur", "Bhopal", "Jaipur"), 0),
+    Question("Where is the National Institute of Agricultural Marketing located?", listOf("Jaipur", "Delhi", "Mumbai", "Lucknow"), 0),
+    Question("Where is the Random Sample Poultry Performance Testing Centre located?", listOf("Gurgaon", "Chennai", "Hyderabad", "Pune"), 0),
+    Question("Where is the National Institute of Animal Health located?", listOf("Baghpat (Uttar Pradesh)", "Varanasi", "Lucknow", "Kanpur"), 0),
+    Question("Where is the Disease Investigation Laboratory located?", listOf("Pune", "Delhi", "Mumbai", "Bangalore"), 0),
+    Question("Where is the Institute of Animal Health & Veterinary Biologicals located?", listOf("Bengaluru (Karnataka)", "Chennai", "Hyderabad", "Pune"), 0),
+    Question("Where is the Indian Council of Agricultural Research (ICAR) located?", listOf("New Delhi", "Mumbai", "Kolkata", "Hyderabad"), 0),
+    Question("Where is the National Sugar Research Institute located?", listOf("Kanpur", "Lucknow", "Pune", "Nagpur"), 0),
+    Question("Where is the Animal Welfare Board of India located?", listOf("Ballabhgarh (Haryana)", "Chandigarh", "Delhi", "Pune"), 0)
+)
+
+
 
 
 val topics = mapOf(
@@ -273,9 +412,12 @@ val topics = mapOf(
     "GK" to listOf(
         "Men",
         "Women",
-        "Miscellaneous"
+        "Miscellaneous",
+        "India-Men",
+        "India-Women",
+        "India-Miscellaneous",
+        "Agri-Ani"
     )
-
 )
 
 val chapters = mapOf(
@@ -291,6 +433,9 @@ val chapters = mapOf(
     "Frequently Asked Part 5" to chapter10Questions,
     "Men" to chapter11Questions,
     "Women" to chapter12Questions,
-    "Miscellaneous" to chapter13Questions
+    "Miscellaneous" to chapter13Questions,
+    "India-Men" to GK1,
+    "India-Women" to GK2,
+    "India-Miscellaneous" to GK3,
+    "Agri-Ani" to GK4
 )
-
